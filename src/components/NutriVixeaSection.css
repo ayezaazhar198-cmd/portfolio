@@ -1,0 +1,213 @@
+.nutrivixea {
+  position: relative;
+  overflow: hidden;
+  scroll-margin-top: 5rem;
+  background:
+    radial-gradient(ellipse at 8% 50%, rgb(112 64 200 / 10%), transparent 42%),
+    linear-gradient(180deg, rgb(14 13 25 / 72%), rgb(8 8 17 / 20%));
+}
+
+.nutrivixea__layout {
+  display: flex;
+  justify-content: center;
+}
+
+.nutrivixea__showcase {
+  display: grid;
+  width: min(100%, 900px);
+  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+  align-items: center;
+  gap: clamp(1.25rem, 4vw, 3rem);
+}
+
+.nutrivixea__photo {
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.nutrivixea__photo img {
+  width: 100%;
+  height: clamp(150px, 21vw, 230px);
+  object-fit: contain;
+}
+
+.nutrivixea__content {
+  min-width: 0;
+}
+
+.nutrivixea__eyebrow {
+  color: var(--color-accent-bright);
+  font-size: 0.7rem;
+  font-weight: 650;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.nutrivixea__content h2 {
+  margin-top: 0.8rem;
+  font-size: clamp(2.1rem, 4.5vw, 3.6rem);
+}
+
+.nutrivixea__subtitle {
+  margin-top: 0.75rem;
+  color: var(--color-text);
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  font-weight: 550;
+  line-height: 1.45;
+}
+
+.nutrivixea__description {
+  margin-top: 0.7rem;
+  color: var(--color-text-muted);
+  font-size: 0.96rem;
+  line-height: 1.75;
+}
+
+.nutrivixea__flavours {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 1.2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nutrivixea__flavours li {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  padding: 0.42rem 0.72rem;
+  color: var(--color-text);
+  background: rgb(146 101 232 / 10%);
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 760px) {
+  .nutrivixea__showcase {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: 0.85rem;
+  }
+
+  .nutrivixea__photo {
+    border-radius: var(--radius-md);
+  }
+
+  .nutrivixea__photo img {
+    height: 125px;
+  }
+
+  .nutrivixea__content h2 {
+    margin-top: 0.45rem;
+    font-size: clamp(1.45rem, 6vw, 2rem);
+  }
+
+  .nutrivixea__subtitle {
+    margin-top: 0.4rem;
+  }
+
+  .nutrivixea__description {
+    margin-top: 0.65rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .nutrivixea__flavours {
+    gap: 0.35rem;
+    margin-top: 0.6rem;
+  }
+
+  .nutrivixea__flavours li {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.74rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .nutrivixea__showcase {
+    grid-template-columns: minmax(0, 0.65fr) minmax(0, 1.35fr);
+    gap: 0.65rem;
+  }
+
+  .nutrivixea__photo img {
+    height: 105px;
+  }
+}
+
+.nutrivixea {
+  background:
+    radial-gradient(ellipse at 12% 48%, rgb(112 64 200 / 13%), transparent 42%),
+    linear-gradient(145deg, #0d0b16, #090811 72%);
+}
+
+.nutrivixea__showcase {
+  width: min(100%, 980px);
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(1.5rem, 5vw, 4rem);
+}
+
+.nutrivixea__photo {
+  border-color: rgb(199 174 255 / 22%);
+  border-radius: 1.25rem;
+  background:
+    radial-gradient(ellipse at 50% 50%, rgb(112 64 200 / 12%), transparent 75%),
+    #0d0b15;
+  box-shadow: 0 24px 68px rgb(0 0 0 / 42%), 0 0 45px rgb(112 64 200 / 9%);
+}
+
+.nutrivixea__photo img {
+  height: clamp(220px, 28vw, 340px);
+}
+
+.nutrivixea__content h2 {
+  margin-top: 0.55rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+.nutrivixea__subtitle {
+  margin-top: 0.65rem;
+  color: var(--color-text);
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+}
+
+.nutrivixea__description {
+  margin-top: 0.55rem;
+}
+
+.nutrivixea__details {
+  margin-top: 0.85rem;
+}
+
+.nutrivixea__flavours {
+  margin-top: 0.7rem;
+}
+
+.nutrivixea__flavours li {
+  border-color: rgb(199 174 255 / 18%);
+  background: rgb(146 101 232 / 10%);
+}
+
+@media (max-width: 760px) {
+  .nutrivixea__showcase {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.95rem;
+  }
+
+  .nutrivixea__photo img {
+    height: clamp(160px, 48vw, 220px);
+  }
+
+  .nutrivixea__content h2 {
+    margin-top: 0.35rem;
+    font-size: clamp(2rem, 8vw, 2.7rem);
+  }
+}
+
+@media (max-width: 360px) {
+  .nutrivixea__photo img {
+    height: 155px;
+  }
+}

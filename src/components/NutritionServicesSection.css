@@ -1,0 +1,280 @@
+.nutrition {
+  position: relative;
+  overflow: hidden;
+  scroll-margin-top: 5rem;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgb(112 64 200 / 11%), transparent 44%),
+    var(--color-background);
+}
+
+.nutrition__heading {
+  max-width: 740px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.nutrition__eyebrow,
+.nutrition__enquiry-label {
+  color: var(--color-accent-bright);
+  font-size: 0.7rem;
+  font-weight: 650;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.nutrition__heading h2 {
+  margin-top: 0.85rem;
+  font-size: clamp(2.25rem, 5.2vw, 4.25rem);
+}
+
+.nutrition__intro {
+  max-width: 590px;
+  margin: 0.65rem auto 0;
+  font-size: clamp(0.94rem, 1.5vw, 1.08rem);
+  line-height: 1.8;
+}
+
+.nutrition__cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.85rem, 2vw, 1.5rem);
+  margin-top: 1.25rem;
+}
+
+.nutrition__card {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  padding: clamp(1.15rem, 2.5vw, 1.75rem);
+  background:
+    radial-gradient(ellipse at 95% 0%, rgb(112 64 200 / 11%), transparent 42%),
+    linear-gradient(150deg, rgb(20 18 34 / 96%), rgb(13 12 24 / 98%));
+  box-shadow: none;
+  transition:
+    border-color var(--motion-standard),
+    transform var(--motion-standard),
+    box-shadow var(--motion-standard);
+}
+
+.nutrition__card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-border-strong);
+  box-shadow: var(--shadow-card), var(--shadow-glow);
+}
+
+.nutrition__card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.7rem;
+}
+
+.nutrition__mark {
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  border: 1px solid rgb(196 168 255 / 20%);
+  border-radius: 50%;
+  color: var(--color-accent-bright);
+  background: rgb(146 101 232 / 10%);
+  font-size: 1.2rem;
+}
+
+.nutrition__number {
+  color: var(--color-text-subtle);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.nutrition__card h3 {
+  max-width: 16rem;
+  margin-top: 0;
+  font-size: clamp(1.16rem, 1.8vw, 1.45rem);
+  line-height: 1.3;
+  letter-spacing: -0.035em;
+}
+
+.nutrition__card p {
+  margin-top: 0.55rem;
+  font-size: 0.88rem;
+  line-height: 1.75;
+}
+
+.nutrition__details {
+  margin-top: 0.65rem;
+}
+
+.nutrition__enquiry {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 1.5rem;
+  border-radius: var(--radius-lg);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background:
+    radial-gradient(ellipse at 100% 50%, rgb(112 64 200 / 14%), transparent 42%),
+    var(--color-surface);
+  box-shadow: none;
+}
+
+.nutrition__enquiry h3 {
+  font-size: clamp(1.25rem, 2.6vw, 1.8rem);
+}
+
+.nutrition__cta {
+  display: inline-flex;
+  min-height: 3rem;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  border-radius: var(--radius-pill);
+  padding: 0.8rem 1.2rem;
+  color: #100b1b;
+  background: var(--gradient-accent);
+  box-shadow: 0 8px 30px rgb(112 64 200 / 24%);
+  font-size: 0.84rem;
+  font-weight: 650;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    box-shadow var(--motion-standard),
+    transform var(--motion-standard);
+}
+
+.nutrition__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 36px rgb(146 101 232 / 36%);
+}
+
+@media (max-width: 760px) {
+  .nutrition__cards {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.7rem;
+    margin-top: 0.9rem;
+  }
+
+  .nutrition__card {
+    min-height: 0;
+    padding: 1rem 1.1rem;
+  }
+
+  .nutrition__card-top {
+    margin-bottom: 0.45rem;
+  }
+
+  .nutrition__card h3 {
+    max-width: none;
+    margin-top: 0;
+    font-size: 1.1rem;
+  }
+
+  .nutrition__enquiry {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.85rem;
+    margin-top: 0.85rem;
+    padding: 1rem 1.1rem;
+  }
+
+  .nutrition__heading {
+    text-align: left;
+  }
+
+  .nutrition__heading h2 {
+    font-size: clamp(2rem, 8.6vw, 2.8rem);
+  }
+
+  .nutrition__intro {
+    margin-top: 0.65rem;
+    font-size: 0.94rem;
+  }
+
+  .nutrition__card p {
+    font-size: 0.83rem;
+    line-height: 1.6;
+  }
+
+  .nutrition__cta {
+    width: 100%;
+    min-height: 3.25rem;
+    padding-inline: 0.75rem;
+    font-size: 0.79rem;
+  }
+}
+
+.nutrition {
+  background:
+    radial-gradient(ellipse at 16% 0%, rgb(112 64 200 / 10%), transparent 42%),
+    linear-gradient(180deg, #090811, #0b0912);
+}
+
+.nutrition__heading {
+  max-width: 800px;
+}
+
+.nutrition__heading h2 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+}
+
+.nutrition__cards {
+  gap: 1rem;
+}
+
+.nutrition__card {
+  border-color: rgb(199 174 255 / 16%);
+  border-radius: 1.25rem;
+  padding: clamp(1.2rem, 2.4vw, 1.75rem);
+  background:
+    radial-gradient(ellipse at 100% 0%, rgb(112 64 200 / 13%), transparent 50%),
+    linear-gradient(145deg, #14111f, #0d0b15);
+  box-shadow: 0 16px 44px rgb(0 0 0 / 24%);
+}
+
+.nutrition__card:hover {
+  border-color: rgb(196 168 255 / 34%);
+}
+
+.nutrition__mark {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-color: rgb(196 168 255 / 24%);
+  background: linear-gradient(145deg, rgb(146 101 232 / 23%), rgb(112 64 200 / 8%));
+}
+
+.nutrition__card h3 {
+  min-height: 2.6em;
+}
+
+.nutrition__details {
+  padding-top: 0.15rem;
+}
+
+.nutrition__details p {
+  padding-top: 0.45rem;
+}
+
+.nutrition__enquiry {
+  border: 1px solid var(--color-border-strong);
+  border-radius: 1.25rem;
+}
+
+.nutrition__cta {
+  border-radius: 0.85rem;
+}
+
+@media (max-width: 760px) {
+  .nutrition__heading h2 {
+    font-size: clamp(2.1rem, 8vw, 2.8rem);
+  }
+
+  .nutrition__card h3 {
+    min-height: 0;
+  }
+}

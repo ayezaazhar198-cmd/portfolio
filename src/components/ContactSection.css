@@ -1,0 +1,320 @@
+.contact {
+  position: relative;
+  overflow: hidden;
+  scroll-margin-top: 5rem;
+  background:
+    radial-gradient(ellipse at 80% 50%, rgb(112 64 200 / 10%), transparent 42%),
+    linear-gradient(180deg, rgb(14 13 25 / 45%), var(--color-background));
+}
+
+.contact__panel {
+  position: relative;
+  display: grid;
+  min-height: 0;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.5rem, 5vw, 4rem);
+  background:
+    linear-gradient(120deg, rgb(18 17 31 / 95%), rgb(14 13 25 / 80%)),
+    var(--color-surface);
+  box-shadow: var(--shadow-card);
+  isolation: isolate;
+}
+
+.contact__glow {
+  position: absolute;
+  z-index: -1;
+  top: -55%;
+  right: -5%;
+  width: 65%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgb(112 64 200 / 22%);
+  filter: blur(72px);
+  pointer-events: none;
+}
+
+.contact__content {
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
+}
+
+.contact__eyebrow {
+  color: var(--color-accent-bright);
+  font-size: 0.7rem;
+  font-weight: 650;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.contact__content h2 {
+  margin-top: 0.55rem;
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+}
+
+.contact__intro {
+  max-width: 32rem;
+  margin-top: 0.65rem;
+  font-size: clamp(0.98rem, 1.5vw, 1.1rem);
+  line-height: 1.8;
+}
+
+.contact__more {
+  margin-top: 0.7rem;
+}
+
+.contact__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.contact__button {
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  padding: 0.7rem 1.1rem;
+  font-size: 0.86rem;
+  font-weight: 650;
+  text-decoration: none;
+  transition:
+    border-color var(--motion-standard),
+    background-color var(--motion-standard),
+    box-shadow var(--motion-standard),
+    transform var(--motion-standard);
+}
+
+.contact__button:hover {
+  transform: translateY(-2px);
+}
+
+.contact__button svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.6;
+}
+
+.contact__button .contact__icon-dot {
+  fill: currentColor;
+  stroke: none;
+}
+
+.contact__button--primary {
+  color: #100b1b;
+  background: var(--gradient-accent);
+  box-shadow: 0 8px 30px rgb(112 64 200 / 24%);
+}
+
+.contact__button--primary:hover {
+  box-shadow: 0 12px 36px rgb(146 101 232 / 38%);
+}
+
+.contact__button--secondary {
+  border-color: var(--color-border-strong);
+  color: var(--color-text);
+  background: rgb(255 255 255 / 4%);
+}
+
+.contact__button--secondary:hover {
+  border-color: rgb(196 168 255 / 48%);
+  background: rgb(196 168 255 / 8%);
+}
+
+.contact__details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 2.5rem;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.contact__detail {
+  display: grid;
+  gap: 0.15rem;
+  color: var(--color-text);
+  font-size: 0.88rem;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+
+.contact__detail:hover {
+  color: var(--color-accent-bright);
+}
+
+.contact__detail-label {
+  color: var(--color-text-subtle);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.contact__art {
+  position: relative;
+  display: grid;
+  width: min(100%, 330px);
+  aspect-ratio: 1;
+  place-items: center;
+  justify-self: center;
+}
+
+.contact__art-orbit {
+  position: absolute;
+  width: 100%;
+  height: 48%;
+  border: 1px solid rgb(196 168 255 / 18%);
+  border-radius: 50%;
+}
+
+.contact__art-orbit--one {
+  transform: rotate(-38deg);
+}
+
+.contact__art-orbit--two {
+  width: 78%;
+  height: 64%;
+  border-color: rgb(196 168 255 / 10%);
+  transform: rotate(44deg);
+}
+
+.contact__art-sphere {
+  width: 45%;
+  aspect-ratio: 1;
+  border: 1px solid rgb(222 207 255 / 27%);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 34% 28%, rgb(220 198 255 / 55%), transparent 9%),
+    radial-gradient(circle at 34% 30%, rgb(177 134 255 / 38%), transparent 36%),
+    radial-gradient(circle at 72% 76%, rgb(104 56 185 / 65%), transparent 54%),
+    linear-gradient(145deg, rgb(61 43 94 / 85%), rgb(15 13 29 / 96%) 72%);
+  box-shadow:
+    inset -16px -18px 38px rgb(0 0 0 / 32%),
+    inset 7px 7px 22px rgb(255 255 255 / 10%),
+    0 0 64px rgb(112 64 200 / 30%);
+}
+
+.contact__art-spark {
+  position: absolute;
+  width: 0.65rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #d9c4ff;
+  box-shadow: 0 0 18px 6px rgb(196 168 255 / 58%);
+}
+
+.contact__art-spark--one {
+  top: 18%;
+  right: 18%;
+}
+
+.contact__art-spark--two {
+  bottom: 18%;
+  left: 14%;
+  width: 0.4rem;
+}
+
+@media (max-width: 760px) {
+  .contact__panel {
+    min-height: auto;
+    grid-template-columns: minmax(0, 1fr);
+    padding: 1.35rem;
+  }
+
+  .contact__art {
+    position: absolute;
+    right: -4rem;
+    bottom: -5rem;
+    width: min(46%, 210px);
+    opacity: 0.28;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 430px) {
+  .contact__panel {
+    border-radius: var(--radius-md);
+    padding: 1.1rem;
+  }
+
+  .contact__content h2 {
+    font-size: clamp(2.1rem, 10vw, 2.7rem);
+  }
+
+  .contact__intro {
+    font-size: 0.94rem;
+  }
+
+  .contact__actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .contact__button {
+    width: 100%;
+    min-height: 3.25rem;
+    justify-content: center;
+    gap: 0.5rem;
+    padding-inline: 0.75rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+
+  .contact__details {
+    display: grid;
+    gap: 0.9rem;
+    margin-top: 0.75rem;
+  }
+}
+
+.contact {
+  background:
+    radial-gradient(ellipse at 82% 45%, rgb(112 64 200 / 12%), transparent 40%),
+    linear-gradient(180deg, #090811, #08070d);
+}
+
+.contact__panel {
+  border-color: rgb(199 174 255 / 17%);
+  border-radius: 1.4rem;
+  background:
+    radial-gradient(ellipse at 100% 0%, rgb(112 64 200 / 16%), transparent 50%),
+    linear-gradient(145deg, #15121f, #0d0b15);
+  box-shadow: 0 24px 68px rgb(0 0 0 / 36%);
+}
+
+.contact__content h2 {
+  font-size: clamp(2.6rem, 6vw, 4.5rem);
+}
+
+.contact__button {
+  border-radius: 0.85rem;
+}
+
+.contact__button--primary {
+  background: var(--gradient-accent);
+}
+
+.contact__button--secondary {
+  border-color: var(--color-border);
+  background: rgb(255 255 255 / 3%);
+}
+
+@media (max-width: 430px) {
+  .contact__content h2 {
+    font-size: clamp(2.3rem, 10vw, 3rem);
+  }
+}

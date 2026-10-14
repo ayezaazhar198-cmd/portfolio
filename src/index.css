@@ -1,0 +1,266 @@
+:root {
+  color-scheme: dark;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-background);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --color-background: #0b0711;
+  --color-background-raised: #110b19;
+  --color-surface: #160f20;
+  --color-surface-hover: #22142c;
+  --color-text: #fbf6fc;
+  --color-text-muted: #c0b4c7;
+  --color-text-subtle: #a090a8;
+  --color-accent: #cf78b5;
+  --color-accent-bright: #efadd5;
+  --color-accent-deep: #884b9c;
+  --color-border: rgb(226 164 210 / 16%);
+  --color-border-strong: rgb(226 164 210 / 28%);
+  --gradient-accent: linear-gradient(120deg, #f2b0d6 0%, #cf78b5 52%, #8550ae 100%);
+  --gradient-glow:
+    radial-gradient(ellipse at 75% 0%, rgb(143 67 135 / 17%), transparent 38%),
+    radial-gradient(ellipse at 12% 45%, rgb(76 43 104 / 10%), transparent 38%);
+  --shadow-card: 0 22px 64px rgb(0 0 0 / 34%);
+  --shadow-glow: 0 0 44px rgb(207 120 181 / 20%);
+
+  --font-body: "Inter", "Segoe UI", system-ui, sans-serif;
+  --font-display: "Inter", "Segoe UI Variable Display", system-ui, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+
+  --content-width: 1160px;
+  --page-gutter: clamp(1rem, 5vw, 4.5rem);
+  --section-space: clamp(3rem, 6vw, 5.5rem);
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --radius-sm: 0.625rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-pill: 999px;
+  --motion-fast: 160ms ease;
+  --motion-standard: 260ms ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--color-background);
+  background-image: var(--gradient-glow);
+  background-attachment: fixed;
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.site-shell {
+  min-height: 100vh;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-weight: 660;
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: clamp(2.75rem, 7vw, 6rem);
+}
+
+h2 {
+  font-size: clamp(2rem, 4.5vw, 3.75rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+p {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+::selection {
+  color: var(--color-text);
+  background: rgb(207 120 181 / 40%);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent-bright);
+  outline-offset: 4px;
+}
+
+.container {
+  width: min(calc(100% - var(--page-gutter) * 2), var(--content-width));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--section-space);
+}
+
+@media (max-width: 760px) {
+  .section {
+    padding-block: 2.35rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .section {
+    padding-block: 1.8rem;
+  }
+}
+
+.stack > * + * {
+  margin-block-start: var(--stack-gap, var(--space-md));
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--cluster-gap, var(--space-md));
+}
+
+.surface-panel {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(145deg, rgb(255 255 255 / 4%), transparent 64%),
+    var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.text-gradient {
+  color: var(--color-accent-bright);
+  background: var(--gradient-accent);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero__details summary,
+.about__details summary,
+.nutrition__details summary,
+.nutrivixea__details summary,
+.contact__more summary,
+.work-card__details summary {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  width: fit-content;
+  color: var(--color-accent-bright);
+  cursor: pointer;
+  font-size: 0.84rem;
+  font-weight: 650;
+  list-style: none;
+}
+
+.hero__details summary::-webkit-details-marker,
+.about__details summary::-webkit-details-marker,
+.nutrition__details summary::-webkit-details-marker,
+.nutrivixea__details summary::-webkit-details-marker,
+.contact__more summary::-webkit-details-marker,
+.work-card__details summary::-webkit-details-marker {
+  display: none;
+}
+
+.hero__details summary::after,
+.about__details summary::after,
+.nutrition__details summary::after,
+.nutrivixea__details summary::after,
+.contact__more summary::after,
+.work-card__details summary::after {
+  display: inline-block;
+  margin-left: 0.45rem;
+  content: "↗";
+  transition: transform var(--motion-standard);
+}
+
+.hero__details[open] summary::after,
+.about__details[open] summary::after,
+.nutrition__details[open] summary::after,
+.nutrivixea__details[open] summary::after,
+.contact__more[open] summary::after,
+.work-card__details[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.hero__details summary:hover,
+.about__details summary:hover,
+.nutrition__details summary:hover,
+.nutrivixea__details summary:hover,
+.contact__more summary:hover,
+.work-card__details summary:hover {
+  color: var(--color-text);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
