@@ -188,7 +188,6 @@ p {
 .hero__details summary,
 .about__details summary,
 .nutrition__details summary,
-.nutrivixea__details summary,
 .contact__more summary,
 .work-card__details summary {
   display: inline-flex;
@@ -205,7 +204,6 @@ p {
 .hero__details summary::-webkit-details-marker,
 .about__details summary::-webkit-details-marker,
 .nutrition__details summary::-webkit-details-marker,
-.nutrivixea__details summary::-webkit-details-marker,
 .contact__more summary::-webkit-details-marker,
 .work-card__details summary::-webkit-details-marker {
   display: none;
@@ -214,7 +212,6 @@ p {
 .hero__details summary::after,
 .about__details summary::after,
 .nutrition__details summary::after,
-.nutrivixea__details summary::after,
 .contact__more summary::after,
 .work-card__details summary::after {
   display: inline-block;
@@ -226,7 +223,6 @@ p {
 .hero__details[open] summary::after,
 .about__details[open] summary::after,
 .nutrition__details[open] summary::after,
-.nutrivixea__details[open] summary::after,
 .contact__more[open] summary::after,
 .work-card__details[open] summary::after {
   transform: rotate(45deg);
@@ -235,7 +231,6 @@ p {
 .hero__details summary:hover,
 .about__details summary:hover,
 .nutrition__details summary:hover,
-.nutrivixea__details summary:hover,
 .contact__more summary:hover,
 .work-card__details summary:hover {
   color: var(--color-text);

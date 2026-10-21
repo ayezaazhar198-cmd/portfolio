@@ -5,7 +5,6 @@ import HeroSection from './components/HeroSection'
 import Navbar from './components/Navbar'
 import NutriVixeaSection from './components/NutriVixeaSection'
 import NutritionServicesSection from './components/NutritionServicesSection'
-import TestimonialsSection from './components/TestimonialsSection'
 
 function App() {
   return (
@@ -15,7 +14,6 @@ function App() {
         <HeroSection />
         <AboutSection />
         <NutritionServicesSection />
-        <TestimonialsSection />
         <NutriVixeaSection />
         <AppsGamesSection />
         <ContactSection />
